@@ -3,7 +3,7 @@ const ATTRIBUTE_SYMBOL = Symbol("attribute");
 const EVENT_SYMBOL = Symbol("event");
 const STATE_SYMBOL = Symbol("state");
 
-export default class TabView {
+export default class ScrollView {
     constructor(config){
         this[PROPERTY_SYMBOL] = Object.create(null);
         this[ATTRIBUTE_SYMBOL] = Object.create(null);
@@ -12,7 +12,6 @@ export default class TabView {
 
 
         this[PROPERTY_SYMBOL].children = [];
-        this[PROPERTY_SYMBOL].headers = [];
 
         this.created();
     }
@@ -24,15 +23,12 @@ export default class TabView {
 
     created(){
         this.root = document.createElement("div");
-        this.root.style.display = "flex";
-        this.headerContainer = document.createElement("div");
-        this.contentContainer = document.createElement("div");
-        this.contentContainer.style.whiteSpace = "nowrap";
-        this.contentContainer.style.overflow = "hidden";
-        this.contentContainer.style.flex = "1";
-        this.headerContainer.style.height = "93px";
-        this.root.appendChild(this.headerContainer);
-        this.root.appendChild(this.contentContainer);
+        this.root.addEventListener("touchmove",function(e){
+            e.cancelBubble = true;
+            e.stopImmediatePropagation();
+        }, {
+            passive:false
+        });
         this[STATE_SYMBOL].h = 0;
     }
     mounted(){
@@ -47,25 +43,7 @@ export default class TabView {
 
     appendChild(child){
         this.children.push(child);
-
-        let title = child.getAttribute("tab-title") || "";
-        this[PROPERTY_SYMBOL].headers.push(title);
-
-        let header = document.createElement("div");
-        header.innerText = title;
-        header.style.display = "inline-block";
-        header.style.height = "93px";
-        header.style.fontFamily = "PingFang SC";
-        header.style.fontSize = "46px";
-        header.style.margin = "20px 35px 0 35px";
-        this.headerContainer.appendChild(header);
-        child.appendTo(this.contentContainer);
-        for(let i = 0; i < this.contentContainer.children.length; i ++) {
-            this.contentContainer.children[i].style.width = "100%";
-            this.contentContainer.children[i].style.height = "100%";
-            this.contentContainer.children[i].style.display = "inline-block";
-        }
-
+        child.appendTo(this.root);
     }
 
 
@@ -81,10 +59,7 @@ export default class TabView {
     setAttribute(name, value){
         if(name == "style") {
             this.root.setAttribute("style", value);
-            this.root.style.display = "flex";
-            this.root.style.flexDirection = "column"
         }
-
         return this[ATTRIBUTE_SYMBOL][name] = value;
     }
     addEventListener(type, listener){
