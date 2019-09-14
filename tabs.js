@@ -1,10 +1,12 @@
+import {enableGesture} from './gesture';
+
 const PROPERTY_SYMBOL = Symbol("property");
 const ATTRIBUTE_SYMBOL = Symbol("attribute");
 const EVENT_SYMBOL = Symbol("event");
 const STATE_SYMBOL = Symbol("state");
 
 export default class TabView {
-    constructor(config){
+    constructor(config) {
         this[PROPERTY_SYMBOL] = Object.create(null);
         this[ATTRIBUTE_SYMBOL] = Object.create(null);
         this[EVENT_SYMBOL] = Object.create(null);
@@ -17,12 +19,12 @@ export default class TabView {
         this.created();
     }
 
-    appendTo(element){
+    appendTo(element) {
         element.appendChild(this.root);
         this.mounted();
     }
 
-    created(){
+    created() {
         this.root = document.createElement("div");
         this.root.style.display = "flex";
         this.headerContainer = document.createElement("div");
@@ -35,17 +37,21 @@ export default class TabView {
         this.root.appendChild(this.contentContainer);
         this[STATE_SYMBOL].h = 0;
     }
-    mounted(){
 
-    }
-    unmounted(){
-
-    }
-    update(){
+    mounted() {
+        // enableGesture(this.contentContainer);
 
     }
 
-    appendChild(child){
+    unmounted() {
+
+    }
+
+    update() {
+
+    }
+
+    appendChild(child) {
         this.children.push(child);
 
         let title = child.getAttribute("tab-title") || "";
@@ -60,7 +66,7 @@ export default class TabView {
         header.style.margin = "20px 35px 0 35px";
         this.headerContainer.appendChild(header);
         child.appendTo(this.contentContainer);
-        for(let i = 0; i < this.contentContainer.children.length; i ++) {
+        for (let i = 0; i < this.contentContainer.children.length; i++) {
             this.contentContainer.children[i].style.width = "100%";
             this.contentContainer.children[i].style.height = "100%";
             this.contentContainer.children[i].style.display = "inline-block";
@@ -69,17 +75,19 @@ export default class TabView {
     }
 
 
-    get children(){
+    get children() {
         return this[PROPERTY_SYMBOL].children;
     }
-    getAttribute(name){
-        if(name == "style") {
+
+    getAttribute(name) {
+        if (name === "style") {
             return this.root.getAttribute("style");
         }
         return this[ATTRIBUTE_SYMBOL][name]
     }
-    setAttribute(name, value){
-        if(name == "style") {
+
+    setAttribute(name, value) {
+        if (name === "style") {
             this.root.setAttribute("style", value);
             this.root.style.display = "flex";
             this.root.style.flexDirection = "column"
@@ -87,20 +95,23 @@ export default class TabView {
 
         return this[ATTRIBUTE_SYMBOL][name] = value;
     }
-    addEventListener(type, listener){
-        if(!this[EVENT_SYMBOL][type])
+
+    addEventListener(type, listener) {
+        if (!this[EVENT_SYMBOL][type])
             this[EVENT_SYMBOL][type] = new Set;
         this[EVENT_SYMBOL][type].add(listener);
     }
-    removeEventListener(type, listener){
-        if(!this[EVENT_SYMBOL][type])
+
+    removeEventListener(type, listener) {
+        if (!this[EVENT_SYMBOL][type])
             return;
         this[EVENT_SYMBOL][type].delete(listener);
     }
-    triggerEvent(type){
-        if(!this[EVENT_SYMBOL][type])
+
+    triggerEvent(type) {
+        if (!this[EVENT_SYMBOL][type])
             return;
-        for(let event of this[EVENT_SYMBOL][type])
+        for (let event of this[EVENT_SYMBOL][type])
             event.call(this);
     }
 }

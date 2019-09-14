@@ -1,4 +1,4 @@
-function enableGesture(main) {
+export function enableGesture(main) {
     let start = (point, context) => {
         //console.log("start")
         context.startX = point.clientX;
@@ -163,11 +163,9 @@ function enableGesture(main) {
             delete contexts[touch.identifier];
         }
     };
-    window.onload = function () {
-        main.addEventListener("touchstart", touchstart);
-        main.addEventListener("touchmove", touchmove);
-        main.addEventListener("touchend", touchend);
-        main.addEventListener("touchcancel", touchcancel);
-    };
+    main.addEventListener("touchstart", touchstart);
+    main.addEventListener("touchmove", touchmove);
+    main.addEventListener("touchend", touchend);
+    main.addEventListener("touchcancel", touchcancel);
 
 }
