@@ -28,6 +28,7 @@ export default class TabView {
         this.root = document.createElement("div");
         this.root.style.display = "flex";
         this.headerContainer = document.createElement("div");
+        this.headerContainer.style.backgroundColor = '#7f2cfd';
         this.contentContainer = document.createElement("div");
         this.contentContainer.style.whiteSpace = "nowrap";
         this.contentContainer.style.overflow = "hidden";
@@ -58,23 +59,37 @@ export default class TabView {
         let tabIndex = this[PROPERTY_SYMBOL].headers.length - 1;
 
         let header = document.createElement("div");
+        let highLight = document.createElement('div');
+        highLight.style.width = '60px';
+        highLight.style.height = '6px';
+        highLight.style.borderRadius = '3px';
+        highLight.style.backgroundColor = '#FFFFFF';
+        tabIndex === 0 ? highLight.style.display = "block" : highLight.style.display = 'none';
+        highLight.style.marginLeft = `${15 + (title.length - 2) * 10}%`;
+        highLight.setAttribute('data-tab-highLight', `${tabIndex}`);
         header.innerText = title;
         header.style.display = "inline-block";
         header.style.height = "93px";
         header.style.fontFamily = "PingFang SC";
         header.style.fontSize = "46px";
+        header.style.color = "#FFFFFF";
         header.style.margin = "20px 35px 0 35px";
+        header.appendChild(highLight);
         header.addEventListener('click', (event) => {
             event.preventDefault();
+            document.querySelectorAll('[data-tab-highLight]').forEach(function (elem, idx) {
+                if (idx !== tabIndex) {
+                    elem.style.display = 'none';
+                } else {
+                    elem.style.display = "block";
+                }
+            });
             for (let i = 0; i < this.contentContainer.children.length; i++) {
                 if (i !== tabIndex) {
                     this.contentContainer.children[i].style.display = 'none';
                 } else {
                     this.contentContainer.children[i].style.display = "inline-block";
                 }
-
-            }
-            if (tabIndex !== 0) {
 
             }
         }, {passive: false});

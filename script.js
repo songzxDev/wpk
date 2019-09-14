@@ -172,7 +172,7 @@ var c = <TabView style="width:100%;height:100%;">
         abc abc abc abc abc abc     abc abc abc  abc abc abc
         abc abc abc abc abc abc
     </ScrollView>
-    <ScrollView tab-title="有趣的店"  style="background-color:lightgreen;">有趣的店</ScrollView>
-    <ScrollView tab-title="品牌新店" style="background-color:pink;">品牌新店</ScrollView>
+    <ScrollView tab-title="有趣的店"  style="background-color:lightgreen;font-size:50px">有趣的店</ScrollView>
+    <ScrollView tab-title="品牌新店" style="background-color:pink;font-size:50px">品牌新店</ScrollView>
 </TabView>;
 c.appendTo(document.body);
