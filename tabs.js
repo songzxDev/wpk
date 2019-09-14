@@ -40,7 +40,6 @@ export default class TabView {
 
     mounted() {
         // enableGesture(this.contentContainer);
-
     }
 
     unmounted() {
@@ -56,6 +55,7 @@ export default class TabView {
 
         let title = child.getAttribute("tab-title") || "";
         this[PROPERTY_SYMBOL].headers.push(title);
+        let tabIndex = this[PROPERTY_SYMBOL].headers.length - 1;
 
         let header = document.createElement("div");
         header.innerText = title;
@@ -64,14 +64,28 @@ export default class TabView {
         header.style.fontFamily = "PingFang SC";
         header.style.fontSize = "46px";
         header.style.margin = "20px 35px 0 35px";
-        this.headerContainer.appendChild(header);
+        header.addEventListener('click', (event) => {
+            event.preventDefault();
+            for (let i = 0; i < this.contentContainer.children.length; i++) {
+                if (i !== tabIndex) {
+                    this.contentContainer.children[i].style.display = 'none';
+                } else {
+                    this.contentContainer.children[i].style.display = "inline-block";
+                }
+
+            }
+            if (tabIndex !== 0) {
+
+            }
+        }, {passive: false});
+
         child.appendTo(this.contentContainer);
         for (let i = 0; i < this.contentContainer.children.length; i++) {
             this.contentContainer.children[i].style.width = "100%";
             this.contentContainer.children[i].style.height = "100%";
             this.contentContainer.children[i].style.display = "inline-block";
         }
-
+        this.headerContainer.appendChild(header);
     }
 
 
