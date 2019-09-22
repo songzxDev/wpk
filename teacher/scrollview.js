@@ -30,7 +30,7 @@ export default class ScrollView {
             let cliRect = this.root.getBoundingClientRect();
             let placeHolderRect = this.placeHolder.getBoundingClientRect();
             if (cliRect.bottom <= placeHolderRect.top) {
-                if (triggered) {
+                if (!triggered) {
                     this.triggerEvent('scrolltobottom');
                     triggered = true;
                 }

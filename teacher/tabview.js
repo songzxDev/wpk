@@ -44,44 +44,50 @@ export default class TabView {
             passive: false
         });
         this.contentContainer.addEventListener("pan", event => {
-            if(event.isVertical) return;
+            if (event.isVertical) return;
+            event.preventDefault();
             let width = this.contentContainer.getBoundingClientRect().width;
-            let position = this[STATE_SYMBOL].position;
             let dx = event.dx;
+            if (this[STATE_SYMBOL].position === 0 && event.dx > 0)
+                dx = dx / 2;
+
+            if (this[STATE_SYMBOL].position === this.contentContainer.children.length - 1 && event.dx < 0)
+                dx = dx / 2;
             for (let i = 0; i < this.contentContainer.children.length; i++) {
                 this.contentContainer.children[i].style.transition = 'transform ease 0s';
-                this.contentContainer.children[i].style.transform = `translateX(${dx - width * position}px)`;
+                this.contentContainer.children[i].style.transform = `translateX(${dx - width * this[STATE_SYMBOL].position}px)`;
             }
         });
         this.contentContainer.addEventListener("panend", event => {
+            if (event.isVertical) return;
+            event.preventDefault();
             let width = this.contentContainer.getBoundingClientRect().width;
-            let position = this[STATE_SYMBOL].position;
             if (event.isFlick) {
                 if (event.dx > 0) {
-                    position--;
+                    this[STATE_SYMBOL].position--;
                 }
 
                 if (event.dx < 0) {
-                    position++;
+                    this[STATE_SYMBOL].position++;
                 }
 
             } else {
                 if (event.dx > width / 2) {
-                    position--;
+                    this[STATE_SYMBOL].position--;
                 } else if (event.dx < -width / 2) {
-                    position++;
+                    this[STATE_SYMBOL].position++;
                 } else {
                 }
 
             }
-            if (position < 0) {
-                position = 0;
-            } else if (position > this.contentContainer.children.length) {
-                position = this.contentContainer.children.length - 1;
+            if (this[STATE_SYMBOL].position < 0) {
+                this[STATE_SYMBOL].position = 0;
+            } else if (this[STATE_SYMBOL].position >= this.contentContainer.children.length) {
+                this[STATE_SYMBOL].position = this.contentContainer.children.length - 1;
             }
             for (let i = 0; i < this.contentContainer.children.length; i++) {
                 this.contentContainer.children[i].style.transition = 'transform ease 0.5s';
-                this.contentContainer.children[i].style.transform = `translateX(${-position * width}%)`;
+                this.contentContainer.children[i].style.transform = `translateX(${-width * this[STATE_SYMBOL].position}px)`;
             }
 
 
