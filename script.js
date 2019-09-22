@@ -30,7 +30,9 @@ function myCreate(Class, attributes, ...children) {
 * */
 function loadMore() {
     setTimeout(()=>{
+
         this.setAttribute('placeHolderText', 'No more');
+        console.log('end', Date.now())
     },5000);
 }
 

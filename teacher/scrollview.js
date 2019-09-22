@@ -25,19 +25,22 @@ export default class ScrollView {
         this.root = document.createElement("div");
         this.placeHolder = document.createElement('div');
         this.placeHolder.style.backgroundColor = '#adadad';
+        this.root.appendChild(this.placeHolder);
         let triggered = false;
         this.root.addEventListener('scroll', (event) => {
+            event.preventDefault();
             let cliRect = this.root.getBoundingClientRect();
             let placeHolderRect = this.placeHolder.getBoundingClientRect();
-            if (cliRect.bottom <= placeHolderRect.top) {
+            if (cliRect.bottom < placeHolderRect.top) {
                 if (!triggered) {
+                    console.log('begin', Date.now())
                     this.triggerEvent('scrolltobottom');
                     triggered = true;
                 }
 
             }
         });
-        this.root.appendChild(this.placeHolder);
+
         this[STATE_SYMBOL].h = 0;
     }
 
@@ -74,7 +77,8 @@ export default class ScrollView {
     setAttribute(name, value) {
         if (name === "style") {
             this.root.setAttribute("style", value);
-        } else if(name === 'placeHolderText') {
+        }
+        if (name === 'placeHolderText') {
             this.placeHolder.innerText = value;
         }
         return this[ATTRIBUTE_SYMBOL][name] = value;
@@ -93,9 +97,13 @@ export default class ScrollView {
     }
 
     triggerEvent(type, ...args) {
-        if (!this[EVENT_SYMBOL][type])
+        if (!this[EVENT_SYMBOL][type]) {
             return;
-        for (let event of this[EVENT_SYMBOL][type])
+        }
+
+        for (let event of this[EVENT_SYMBOL][type]) {
             event.call(this, ...args);
+        }
+
     }
 }
