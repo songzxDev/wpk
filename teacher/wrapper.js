@@ -36,25 +36,12 @@ export default class Wrapper {
     }
 
     addEventListener(type, listener) {
-        if (!this[EVENT_SYMBOL][type]) {
-            this[EVENT_SYMBOL][type] = new Set();
-        }
-        this[EVENT_SYMBOL][type].add(listener);
+        this.root.addEventListener(...arguments);
     }
 
     removeEventListener(type, listener) {
-        if (!this[EVENT_SYMBOL][type]) {
-            return;
-        }
-        this[EVENT_SYMBOL][type].delete(listener);
+        this.root.removeEventListener(...arguments);
     }
 
-    triggerEvent(type) {
-        if (!this[EVENT_SYMBOL][type])
-            return;
-        for (let event of this[EVENT_SYMBOL][type]) {
-            event.call(this);
-        }
-    }
 
 }

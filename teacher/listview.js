@@ -26,8 +26,6 @@ export default class ListView {
 
     created() {
         this.root = document.createElement("div");
-        let element = <p>abcdefg<Div>abc</Div></p>;
-        element.appendTo(this.root);
     }
 
     mounted() {
@@ -42,10 +40,20 @@ export default class ListView {
 
     }
 
+    render() {
+        let data = this[ATTRIBUTE_SYMBOL]['data'] || [];
+        return <div>
+            {
+                data.map(item => {
+                    return <div><span>{item.abc}</span></div>;
+                })
+            }
+        </div>;
+    }
+
     appendChild(child) {
         this.children.push(child);
         child.appendTo(this.root);
-        this.root.appendChild(this.placeHolder);
     }
 
 
@@ -63,6 +71,12 @@ export default class ListView {
     setAttribute(name, value) {
         if (name === "style") {
             this.root.setAttribute("style", value);
+        }
+        if (name === 'data') {
+            this[ATTRIBUTE_SYMBOL][name] = value;
+            this.root.innerHTML = "";
+            this.render().appendTo(this.root);
+            return value;
         }
         return this[ATTRIBUTE_SYMBOL][name] = value;
     }

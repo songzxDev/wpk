@@ -15,7 +15,7 @@ function loadMore() {
     }, 5000);
 }
 
-window.render = function () {
+window.render = function (data, root) {
     let c = <TabView style="width:100%;height:100%;">
         <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:lightblue;white-space:normal;font-size:50px">
@@ -313,7 +313,7 @@ window.render = function () {
             dbf dbf dbf dbf dbf dbf
         </ScrollView>
         <ScrollView tab-title="品牌新店" style="background-color:pink;font-size:50px">
-            <ListView></ListView>
+            <ListView data={data}></ListView>
         </ScrollView>
     </TabView>;
     c.appendTo(document.body);
