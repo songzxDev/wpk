@@ -11,6 +11,12 @@ module.exports = {
                         plugins: [['babel-plugin-transform-react-jsx', {pragma: "create"}]]
                     }
                 }
+            },
+            {
+                test: /\.component$/,
+                use: {
+                    loader: require.resolve('./component-loader.js')
+                }
             }
         ]
     },

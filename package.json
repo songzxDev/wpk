@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
-    "babel-preset-spritejsx": "^1.0.7"
+    "babel-preset-spritejsx": "^1.0.7",
+    "require": "^2.4.20"
   },
   "repository": {
     "type": "git",
