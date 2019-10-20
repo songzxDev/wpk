@@ -316,6 +316,12 @@ window.render = function (data, root) {
             <ListView data={data}></ListView>
         </ScrollView>
     </TabView>;*/
+
     let c = tree;
+    c = <div>
+        <span class="x">000</span>
+        <br/><br/>
+        <ListView data={[{abc: 123 * 123}]}></ListView>
+    </div>;
     c.appendTo(document.body);
 };

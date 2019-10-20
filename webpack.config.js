@@ -17,7 +17,11 @@ module.exports = {
                 use: {
                     loader: require.resolve('./component-loader.js')
                 }
-            }
+            },
+            {
+                test: /\.css$/i,
+                use: ['to-string-loader', 'css-loader'],
+            },
         ]
     },
     mode: "development",
