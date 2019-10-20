@@ -8,7 +8,10 @@ module.exports = function (source, map) {
     console.log(filename);
     let obj = css.parse(source);
     for (let rule of obj.stylesheet.rules) {
-        rule.selectors = rule.selectors.map(selector => `.${filename} ${selector}`);
+        if (rule.type === 'rule') {
+            rule.selectors = rule.selectors.map(selector => `.${filename} ${selector}`);
+        }
+
     }
     return "export default " + JSON.stringify(css.stringify(obj));
 };

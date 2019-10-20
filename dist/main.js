@@ -154,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\".listview .x {\\n  color: #ba3cf9;\\n}\");\n\n//# sourceURL=webpack:///./teacher/listview.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"/*abc*/\\n\\n.listview .x {\\n  color: #ba3cf9;\\n}\");\n\n//# sourceURL=webpack:///./teacher/listview.css?");
 
 /***/ }),
 
