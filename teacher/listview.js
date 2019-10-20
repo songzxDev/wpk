@@ -8,13 +8,10 @@ const ATTRIBUTE_SYMBOL = Symbol("attribute");
 const EVENT_SYMBOL = Symbol("event");
 const STATE_SYMBOL = Symbol("state");
 
-if (!window.LIST_VIEW_STYLE_ELEMENT) {
-    let styleElement = document.createElement('style');
-    styleElement.innerHTML = css;
-    styleElement.setAttribute('scoped', '');
-    document.getElementsByTagName('head')[0].appendChild(styleElement);
-    window.LIST_VIEW_STYLE_ELEMENT = true;
-}
+let styleElement = document.createElement('style');
+styleElement.innerHTML = css;
+styleElement.setAttribute('scoped', '');
+document.getElementsByTagName('head')[0].appendChild(styleElement);
 
 
 export default class ListView {
@@ -37,7 +34,7 @@ export default class ListView {
 
     created() {
         this.root = document.createElement("div");
-        this.root.classList.add('list-view');
+        this.root.classList.add('listview');
         this.render().appendTo(this.root);
     }
 

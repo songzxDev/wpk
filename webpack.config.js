@@ -20,7 +20,9 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ['to-string-loader', 'css-loader'],
+                use: {
+                    loader: require.resolve('./component-css-loader.js')
+                },
             },
         ]
     },
