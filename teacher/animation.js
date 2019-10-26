@@ -82,7 +82,7 @@ function cubicBezier(p1x, p1y, p2x, p2y) {
 }
 
 let linear = cubicBezier(0, 0, 1, 1);
-let ease = cubicBezier(.25, .1, .25, 1);
+export let ease = cubicBezier(.25, .1, .25, 1);
 let easeIn = cubicBezier(.42, 0, 1, 1);
 let easeOut = cubicBezier(0, 0, .58, 1);
 let easeInOut = cubicBezier(.42, 0, .58, 1);
@@ -93,7 +93,7 @@ let myEase = cubicBezier(.42, -0.6, .83, .67);
 =========================================================================================================
  */
 
-class Timeline {
+export class Timeline {
     // 添加状态是解决重复点击按钮后，动画轨迹不正确的问题
     //inited, started, paused,
     constructor() {
@@ -178,7 +178,7 @@ class Timeline {
 }
 
 // 蜚蠊
-class DOMElementStyleNumberAnimation {
+export class DOMElementStyleNumberAnimation {
     constructor(element, property, startTime, startValue, endTime, endValue, converter) {
         this._element = element;
         this._property = property;
@@ -219,7 +219,7 @@ class DOMElementStyleNumberAnimation {
     }
 }
 
-class DomElementStyleVectorAnimation {
+export class DomElementStyleVectorAnimation {
     constructor(element, property, startTime, startValue, endTime, endValue, converter) {
         // 真正的私有要用Symbol
         this._element = element;
