@@ -90,8 +90,12 @@ export default class Carousel {
         this[ATTRIBUTE_SYMBOL].nextPictureTimer = setTimeout(() => this.nextPicture(), 3000);
     }
 
-
     mounted() {
+
+    }
+
+
+    addPan() {
         let startTransform;
 
         let offset = 0;
@@ -229,7 +233,7 @@ export default class Carousel {
             }
             this[ATTRIBUTE_SYMBOL].children = Array.prototype.slice.call(this[ATTRIBUTE_SYMBOL].container.children);
             enableGesture(this[ATTRIBUTE_SYMBOL].container);
-            this.mounted();
+            this.addPan();
             this.render();
         }
         return this[ATTRIBUTE_SYMBOL][name] = value;
