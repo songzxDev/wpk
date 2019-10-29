@@ -130,6 +130,7 @@ export default class Carousel {
 
             current.style.transition = "ease 0s";
             current.style.transform = `translate(${-this.parentWidth * this[ATTRIBUTE_SYMBOL].position + event.dx + offset}px)`;
+            // TODO: 比较 lou 的方式，后续需要优化
             window['is_carousel'] = true;
         });
         this[ATTRIBUTE_SYMBOL].container.addEventListener("panend", event => {
@@ -182,9 +183,10 @@ export default class Carousel {
 
             current.style.transition = "";
             current.style.transform = `translate(${-this.parentWidth * this[ATTRIBUTE_SYMBOL].position}px)`;
+            // TODO: 比较 lou 的方式，后续需要优化
             setTimeout(function () {
                 window['is_carousel'] = false;
-            }, 1200)
+            }, 1200);
 
         });
 
