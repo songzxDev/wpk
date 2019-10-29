@@ -44,7 +44,7 @@ export default class TabView {
             passive: false
         });
         this.contentContainer.addEventListener("pan", event => {
-            if (event.isVertical) return;
+            if (event.isVertical || window['is_carousel']) return;
             event.preventDefault();
             let width = this.contentContainer.getBoundingClientRect().width;
             let dx = event.dx;
@@ -59,7 +59,7 @@ export default class TabView {
             }
         });
         this.contentContainer.addEventListener("panend", event => {
-            if (event.isVertical) return;
+            if (event.isVertical || window['is_carousel']) return;
             event.preventDefault();
             let width = this.contentContainer.getBoundingClientRect().width;
             if (event.isFlick) {

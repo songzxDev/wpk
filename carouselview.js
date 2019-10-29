@@ -2,6 +2,7 @@ import {enableGesture} from './gesture';
 import {Timeline} from './teacher/animation.js';
 import {DOMElementStyleNumberAnimation} from './teacher/animation.js';
 import {ease} from './teacher/animation.js'
+
 const PROPERTY_SYMBOL = Symbol('property');
 const ATTRIBUTE_SYMBOL = Symbol('attribute');
 const EVENT_SYMBOL = Symbol('event');
@@ -129,6 +130,7 @@ export default class Carousel {
 
             current.style.transition = "ease 0s";
             current.style.transform = `translate(${-this.parentWidth * this[ATTRIBUTE_SYMBOL].position + event.dx + offset}px)`;
+            window['is_carousel'] = true;
         });
         this[ATTRIBUTE_SYMBOL].container.addEventListener("panend", event => {
             let children = this[ATTRIBUTE_SYMBOL].children;
@@ -180,7 +182,9 @@ export default class Carousel {
 
             current.style.transition = "";
             current.style.transform = `translate(${-this.parentWidth * this[ATTRIBUTE_SYMBOL].position}px)`;
-
+            setTimeout(function () {
+                window['is_carousel'] = false;
+            }, 1200)
 
         });
 
