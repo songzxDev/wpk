@@ -27,9 +27,15 @@ window.render = function (data, root) {
     let c = <TabView style="width:100%;height:100%;">
         <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:lightblue;white-space:normal;font-size:50px">
-            <Carousel style="margin: 28px; height: 492px; overflow: hidden; white-space: nowrap; outline: solid 1px blue;" pictures={pictures}>
+            <Carousel style="border-radius: 36px; margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;" pictures={pictures}>
 
             </Carousel>
+            <ListView data={data}>
+                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+            </ListView>
         </ScrollView>
         <ScrollView tab-title="有趣的店"
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:lightgreen;white-space:normal;font-size:50px">
