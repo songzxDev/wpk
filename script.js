@@ -27,14 +27,32 @@ window.render = function (data, root) {
     let c = <TabView style="width:100%;height:100%;">
         <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:lightblue;white-space:normal;font-size:50px">
-            <Carousel style="border-radius: 36px; margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;" pictures={pictures}>
+            <Carousel
+                style="border-radius: 36px; margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;"
+                pictures={pictures}>
 
             </Carousel>
             <ListView data={data}>
-                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
-                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
-                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
-                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;">
+                    <div style="display: flex; height: 164px;">
+                        <div style="width: 50%; margin: 40px;">
+                            极客时间旗舰店
+                        </div>
+                        <div style="width: 50%;">
+                            <a style="float: right; margin: 36px;" href="javascript:void(0);">进店</a>
+                        </div>
+                    </div>
+
+                    <div style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
+                        好店君：该店已被1.3万人关注，快来关注吧！
+                    </div>
+                </div>
+                <div
+                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div
+                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
+                <div
+                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
             </ListView>
         </ScrollView>
         <ScrollView tab-title="有趣的店"
