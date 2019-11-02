@@ -55,7 +55,34 @@ export default class ListView {
         return <div>
             {
                 data.map(item => {
-                    return <div><span class="x">{item.abc}</span></div>;
+                    return <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;">
+                        <div style="display: flex; height: 164px;">
+                            <div style="width: 50%; margin: 40px;">
+                                {item.title}
+                            </div>
+                            <div style="width: 50%;">
+                                <a style="float: right; margin: 36px;" href="javascript:void(0);">进店</a>
+                            </div>
+                        </div>
+
+                        <div style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
+                            好店君：该店已被1.3万人关注，快来关注吧！
+                        </div>
+
+                        <div style="display: flex; margin: 25px 34px 131px 34px;">
+                            <div style="width: 626px; height: 626px;  margin-right: 15px;">
+                                <img src={item.pictures[0]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                            </div>
+                            <div style="width: 308px; height: 626px; display: flex; flex-direction: column;">
+                                <div style="width: 100%; height: 50%; margin-bottom: 5px;">
+                                    <img src={item.pictures[1]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                </div>
+                                <div style="width: 100%; height: 50%;">
+                                    <img src={item.pictures[1]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 })
             }
         </div>;

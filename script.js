@@ -19,10 +19,10 @@ function loadMore() {
 
 window.render = function (data, root) {
     let pictures = [
-        "https://static001.geekbang.org/resource/image/bb/21/bb38fb7c1073eaee1755f81131f11d21.jpg",
-        "https://static001.geekbang.org/resource/image/1b/21/1b809d9a2bdf3ecc481322d7c9223c21.jpg",
-        "https://static001.geekbang.org/resource/image/b6/4f/b6d65b2f12646a9fd6b8cb2b020d754f.jpg",
-        "https://static001.geekbang.org/resource/image/73/e4/730ea9c393def7975deceb48b3eb6fe4.jpg"
+        "https://img.alicdn.com/imgextra/i4/739179444/O1CN01WomSRa2JdOw1a4KAa_!!739179444.jpg_430x430q90.jpg",
+        "https://img.alicdn.com/imgextra/i1/3954877919/O1CN01pQ18Jj28MwxyqWBXe_!!3954877919.jpg_430x430q90.jpg",
+        "https://img.alicdn.com/imgextra/i3/3954877919/O1CN01V0UUen28Mwy1c9xR1_!!0-item_pic.jpg_430x430q90.jpg",
+        "https://img.alicdn.com/imgextra/i4/2274338009/O1CN01vC8AkK292AdnMTgq5_!!2274338009.jpg_430x430q90.jpg"
     ];
     let c = <TabView style="width:100%;height:100%;">
         <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
@@ -33,40 +33,8 @@ window.render = function (data, root) {
 
             </Carousel>
             <ListView data={data}>
-                <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;">
-                    <div style="display: flex; height: 164px;">
-                        <div style="width: 50%; margin: 40px;">
-                            极客时间旗舰店
-                        </div>
-                        <div style="width: 50%;">
-                            <a style="float: right; margin: 36px;" href="javascript:void(0);">进店</a>
-                        </div>
-                    </div>
 
-                    <div style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
-                        好店君：该店已被1.3万人关注，快来关注吧！
-                    </div>
 
-                    <div style="display: flex; margin: 25px 34px 131px 34px;">
-                        <div style="width: 626px; height: 626px;  margin-right: 15px;">
-                            <img src="https://static001.geekbang.org/resource/image/bb/21/bb38fb7c1073eaee1755f81131f11d21.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
-                        </div>
-                        <div style="width: 308px; height: 626px; display: flex; flex-direction: column;">
-                            <div style="width: 100%; height: 50%; margin-bottom: 5px;">
-                                <img src="https://static001.geekbang.org/resource/image/1b/21/1b809d9a2bdf3ecc481322d7c9223c21.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
-                            </div>
-                            <div style="width: 100%; height: 50%;">
-                                <img src="https://static001.geekbang.org/resource/image/73/e4/730ea9c393def7975deceb48b3eb6fe4.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
-                <div
-                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
-                <div
-                    style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;"></div>
             </ListView>
         </ScrollView>
         <ScrollView tab-title="有趣的店"
