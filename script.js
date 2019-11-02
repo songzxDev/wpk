@@ -28,7 +28,7 @@ window.render = function (data, root) {
         <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:lightblue;white-space:normal;font-size:50px">
             <Carousel
-                style="border-radius: 36px; margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;"
+                style="margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;"
                 pictures={pictures}>
 
             </Carousel>
@@ -45,6 +45,20 @@ window.render = function (data, root) {
 
                     <div style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
                         好店君：该店已被1.3万人关注，快来关注吧！
+                    </div>
+
+                    <div style="display: flex; margin: 25px 34px 131px 34px;">
+                        <div style="width: 626px; height: 626px;  margin-right: 15px;">
+                            <img src="https://static001.geekbang.org/resource/image/bb/21/bb38fb7c1073eaee1755f81131f11d21.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                        </div>
+                        <div style="width: 308px; height: 626px; display: flex; flex-direction: column;">
+                            <div style="width: 100%; height: 50%; margin-bottom: 5px;">
+                                <img src="https://static001.geekbang.org/resource/image/1b/21/1b809d9a2bdf3ecc481322d7c9223c21.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                            </div>
+                            <div style="width: 100%; height: 50%;">
+                                <img src="https://static001.geekbang.org/resource/image/73/e4/730ea9c393def7975deceb48b3eb6fe4.jpg" alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div

@@ -236,6 +236,7 @@ export default class Carousel {
                 e.style.width = '100%';
                 e.style.height = '100%';
                 e.style.display = 'inline-block';
+                e.style.borderRadius = '36px';
             }
             this[ATTRIBUTE_SYMBOL].children = Array.prototype.slice.call(this[ATTRIBUTE_SYMBOL].container.children);
             enableGesture(this[ATTRIBUTE_SYMBOL].container);
