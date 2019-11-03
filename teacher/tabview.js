@@ -90,7 +90,13 @@ export default class TabView {
                 this.contentContainer.children[i].style.transition = 'transform ease 0.5s';
                 this.contentContainer.children[i].style.transform = `translateX(${-width * this[STATE_SYMBOL].position}px)`;
             }
-
+            for (let i = 0; i < this.headerContainer.children.length; i++) {
+                if (i === this[STATE_SYMBOL].position) {
+                    this.headerContainer.children[i].style.opacity = "inherit";
+                } else {
+                    this.headerContainer.children[i].style.opacity = "0.5";
+                }
+            }
 
         });
     }
