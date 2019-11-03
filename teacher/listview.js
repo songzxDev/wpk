@@ -61,7 +61,9 @@ export default class ListView {
                                 {item.title}
                             </div>
                             <div style="width: 50%;">
-                                <a style="float: right; margin: 36px;" href="javascript:void(0);">进店</a>
+                                <div style="font-size: 40px; margin: 43px; float: right; text-align: center; color: #FFFFFF; width: 160px; height: 72px; line-height: 68px; background-image: linear-gradient(90deg, #fec900 0%, #feac00 100%), linear-gradient(#ffffff, #ffffff); background-blend-mode: normal, normal; border-radius: 36px;">
+                                    进店>
+                                </div>
                             </div>
                         </div>
 
