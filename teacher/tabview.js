@@ -112,7 +112,7 @@ export default class TabView {
 
     appendChild(child) {
         this.children.push(child);
-        let n = this.children.length;
+        let n = this.children.length - 1;
         let title = child.getAttribute("tab-title") || "";
         this[PROPERTY_SYMBOL].headers.push(title);
 
