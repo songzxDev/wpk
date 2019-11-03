@@ -33,6 +33,7 @@ export default class TabView {
         this.contentContainer.style.overflow = "hidden";
         this.contentContainer.style.flex = "1";
         this.headerContainer.style.height = "93px";
+        this.headerContainer.style.backgroundColor = "#9e48ff";
         this.root.appendChild(this.headerContainer);
         this.root.appendChild(this.contentContainer);
         this[STATE_SYMBOL].position = 0;
@@ -120,16 +121,27 @@ export default class TabView {
         header.innerText = title;
         header.style.display = "inline-block";
         header.style.height = "93px";
+        header.style.lineHeight = "35px";
         header.style.fontFamily = "PingFang SC";
         header.style.fontSize = "46px";
         header.style.margin = "20px 35px 0 35px";
-
+        header.style.letterSpacing = "0px";
+        header.style.color = "#FFFFFF";
+        if (n > 0) {
+            header.style.opacity = "0.5";
+        }
         this.headerContainer.appendChild(header);
         header.addEventListener('click', event => {
             this[STATE_SYMBOL].position = n;
             for (let i = 0; i < this.contentContainer.children.length; i++) {
                 this.contentContainer.children[i].style.transition = 'transform ease 0.5s';
                 this.contentContainer.children[i].style.transform = `translateX(${-n * 100}%)`;
+                if (i !== n) {
+                    this.headerContainer.children[i].style.opacity = "0.5";
+                } else {
+                    this.headerContainer.children[i].style.opacity = "inherit";
+                }
+
             }
         });
         child.appendTo(this.contentContainer);
