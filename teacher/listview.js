@@ -80,7 +80,7 @@ export default class ListView {
                                     <img src={item.pictures[1]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
                                 </div>
                                 <div style="width: 100%; height: 50%;">
-                                    <img src={item.pictures[1]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                    <img src={item.pictures[2]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
                                 </div>
                             </div>
                         </div>
