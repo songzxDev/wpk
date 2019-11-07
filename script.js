@@ -34,8 +34,8 @@ window.render = function (data, root) {
             <div style="margin: 69px 34px 40px; height: 43px; font-family: PingFangSC-Medium; font-size: 46px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #333333;">
                 超多人气收藏的店
             </div>
-            <div style="margin: 0 34px 35px; display: flex;">
-                <div style="height: 361px; width: 50%; margin-right: 25px; border-radius: 18px; background-color: #fefefe;">
+            <div style="margin: 0 28px 35px; display: flex; width: 924px;">
+                <div style="height: 361px; width: 450px; margin-right: 24px; border-radius: 18px; background-color: #fefefe;">
                     <div style="margin: 27px 35px; display: flex;">
                         <div style="width: 78px; height: 78px;"></div>
                         <div style=" height: 78px; display: flex; flex-flow: column;">
@@ -54,7 +54,7 @@ window.render = function (data, root) {
                         </div>
                     </div>
                 </div>
-                <div style="height: 361px; width: 50%; border-radius: 18px; background-color: #fefefe;">
+                <div style="height: 361px; width: 450px; border-radius: 18px; background-color: #fefefe;">
                     <div style="margin: 27px 35px; display: flex;">
                         <div style="width: 78px; height: 78px;"></div>
                         <div style=" height: 78px; display: flex; flex-flow: column;">
