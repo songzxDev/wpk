@@ -51,7 +51,9 @@ window.render = function (data, root) {
                     <div
                         style="height: 361px; width: 450px; margin-right: 24px; border-radius: 18px; background-color: #fefefe;">
                         <div style="margin: 27px 35px; display: flex;">
-                            <div style="width: 78px; height: 78px;"></div>
+                            <div style="width: 78px; height: 78px;">
+                                <img style="width: 100%; height: 100%; border-radius: 50%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573301646402&di=610f315e87317c7fdb4c3c55ee04a65a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01f0305548ff320000019ae937d7f2.jpg%401280w_1l_2o_100sh.jpg" alt=""/>
+                            </div>
                             <div style=" height: 78px; display: flex; flex-flow: column;">
                                 <div
                                     style="margin-left: 18px; height: 34px; font-family: PingFangSC-Regular; font-size: 36px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #333333;">
@@ -77,7 +79,9 @@ window.render = function (data, root) {
                     </div>
                     <div style="height: 361px; width: 450px; border-radius: 18px; background-color: #fefefe;">
                         <div style="margin: 27px 35px; display: flex;">
-                            <div style="width: 78px; height: 78px;"></div>
+                            <div style="width: 78px; height: 78px;">
+                                <img style="width: 100%; height: 100%; border-radius: 50%;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573301792809&di=3912196aacf69dd84d60d5aaf9c0adc8&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F27%2F11%2F16pic_2711338_b.jpg" alt=""/>
+                            </div>
                             <div style=" height: 78px; display: flex; flex-flow: column;">
                                 <div
                                     style="margin-left: 18px; height: 34px; font-family: PingFangSC-Regular; font-size: 36px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #333333;">

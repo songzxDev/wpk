@@ -55,32 +55,51 @@ export default class ListView {
         return <div>
             {
                 data.map(item => {
-                    return <div style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;">
+                    return <div
+                        style="width: 924px; height: 960px; margin: 28px; background-color: #fefefe; border-radius: 36px;">
                         <div style="display: flex; height: 164px;">
-                            <div style="width: 50%; margin: 40px;">
-                                {item.title}
+                            <div style="width: 70%; margin: 40px; height: 105px; display: flex;">
+                                <div style="width: 105px; height: 105px;">
+                                    <img src={item.logo} alt="" style="width: 100%; height: 100%; border-radius: 50%;"/>
+                                </div>
+                                <div style="height: 105px; display: flex; flex-flow: column; margin-left: 5px;">
+                                    <div
+                                        style="height: 50%;width: 400px; height: 44px; font-family: PingFangSC-Medium; font-size: 46px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #333333;">
+                                        {item.title}</div>
+                                    <div style="height: 50%;">
+                                        <div
+                                            style="margin:18px 0 0 18px; width: 63px; height: 30px; font-family: PingFangSC-Regular; font-size: 26px; line-height: 25px; background-color: #ee0507; border-radius: 15px; color: #FFFFFF;">天猫
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div style="width: 50%;">
-                                <div style="font-size: 40px; margin: 43px; float: right; text-align: center; color: #FFFFFF; width: 160px; height: 72px; line-height: 68px; background-image: linear-gradient(90deg, #fec900 0%, #feac00 100%), linear-gradient(#ffffff, #ffffff); background-blend-mode: normal, normal; border-radius: 36px;">
+                            <div style="width: 30%;">
+                                <div
+                                    style="font-size: 40px; margin: 43px; float: right; text-align: center; color: #FFFFFF; width: 160px; height: 72px; line-height: 68px; background-image: linear-gradient(90deg, #fec900 0%, #feac00 100%), linear-gradient(#ffffff, #ffffff); background-blend-mode: normal, normal; border-radius: 36px;">
                                     进店>
                                 </div>
                             </div>
                         </div>
 
-                        <div style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
+                        <div
+                            style="padding-left:34px; display: flex; align-items: center; font-size:36px; height:98px; background:rgba(245,245,245,1); border-radius:16px; margin: 0 35px;">
                             好店君：该店已被1.3万人关注，快来关注吧！
                         </div>
 
                         <div style="display: flex; margin: 25px 34px 131px 34px;">
                             <div style="width: 626px; height: 626px;  margin-right: 15px;">
-                                <img src={item.pictures[0]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                <img src={item.pictures[0]} alt=""
+                                     style="width: 100%; height: 100%; border-radius: 36px;"/>
                             </div>
                             <div style="width: 308px; height: 626px; display: flex; flex-direction: column;">
                                 <div style="width: 100%; height: 50%; margin-bottom: 5px;">
-                                    <img src={item.pictures[1]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                    <img src={item.pictures[1]} alt=""
+                                         style="width: 100%; height: 100%; border-radius: 36px;"/>
                                 </div>
                                 <div style="width: 100%; height: 50%;">
-                                    <img src={item.pictures[2]} alt="" style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                    <img src={item.pictures[2]} alt=""
+                                         style="width: 100%; height: 100%; border-radius: 36px;"/>
                                 </div>
                             </div>
                         </div>
