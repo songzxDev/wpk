@@ -87,21 +87,24 @@ export default class ListView {
                             好店君：该店已被1.3万人关注，快来关注吧！
                         </div>
 
-                        <div style="display: flex; margin: 25px 34px 131px 34px;">
+                        <div style="display: flex; margin: 25px 34px 0px 34px;">
                             <div style="width: 626px; height: 626px;  margin-right: 15px;">
                                 <img src={item.pictures[0]} alt=""
-                                     style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                     style="width: 100%; height: 563.67px; border-radius: 36px;"/>
                             </div>
                             <div style="width: 308px; height: 626px; display: flex; flex-direction: column;">
                                 <div style="width: 100%; height: 50%; margin-bottom: 5px;">
                                     <img src={item.pictures[1]} alt=""
-                                         style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                         style="width: 100%; height: 277.33px; border-radius: 36px;"/>
                                 </div>
                                 <div style="width: 100%; height: 50%;">
                                     <img src={item.pictures[2]} alt=""
-                                         style="width: 100%; height: 100%; border-radius: 36px;"/>
+                                         style="width: 100%; height: 277.33px; border-radius: 36px;"/>
                                 </div>
                             </div>
+                        </div>
+                        <div style="margin-right: 35px;text-align: right; height: 31px; font-family: PingFangSC-Light; font-size: 32px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #888888;">
+                            相似好店>
                         </div>
                     </div>
                 })
