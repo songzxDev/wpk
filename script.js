@@ -139,7 +139,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
@@ -188,7 +188,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
@@ -237,7 +237,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
@@ -286,7 +286,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
@@ -335,7 +335,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
@@ -384,7 +384,7 @@ window.render = function (data, root) {
                                     </div>
                                 </div>
                                 <div
-                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#523b2654;  border-radius: 36px;">
+                                    style="margin: 58px 35px 43px 0; float: right;display: flex; align-items: center;width: 160px; height: 72px; background-color:#8B5742;  border-radius: 36px;">
                                     <div
                                         style="margin-left: 25px;width: 76px; height: 37px; font-family: PingFangSC-Regular; font-size: 40px; font-weight: normal; font-stretch: normal; line-height: 35px; letter-spacing: 0px; color: #ffffff;">
                                         进店>
