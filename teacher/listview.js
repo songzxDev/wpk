@@ -68,7 +68,7 @@ export default class ListView {
                                         {item.title}</div>
                                     <div style="height: 50%;">
                                         <div
-                                            style="margin:18px 0 0 18px; width: 63px; height: 30px; font-family: PingFangSC-Regular; font-size: 26px; line-height: 25px; background-color: #ee0507; border-radius: 15px; color: #FFFFFF;">天猫
+                                            style="display: flex; align-items: center; margin:18px 0 0 18px; width: 63px; height: 30px; font-family: PingFangSC-Regular; font-size: 26px; line-height: 25px; background-color: #ee0507; border-radius: 15px; color: #FFFFFF;">天猫
                                         </div>
                                     </div>
                                 </div>
