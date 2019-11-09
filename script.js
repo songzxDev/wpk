@@ -100,7 +100,7 @@ window.render = function (data, root) {
         </ScrollView>
         <ScrollView tab-title="品牌新店" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#FFFFFF;">
-            <div style="margin: 28px; width: 924px; background-color: #523b26a1;border-radius: 36px;">
+            <div style="margin: 28px; width: 924px; background-color: #D2848C;border-radius: 36px;">
                 <div style="width: 100%; height: 793px;  ">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
