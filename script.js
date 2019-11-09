@@ -101,7 +101,7 @@ window.render = function (data, root) {
         <ScrollView tab-title="品牌新店" placeHolderText="load more" on-scrolltobottom={loadMore}
                     style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#FFFFFF;">
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
@@ -138,7 +138,7 @@ window.render = function (data, root) {
                 </div>
             </div>
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
@@ -175,7 +175,7 @@ window.render = function (data, root) {
                 </div>
             </div>
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
@@ -212,7 +212,7 @@ window.render = function (data, root) {
                 </div>
             </div>
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
@@ -249,7 +249,7 @@ window.render = function (data, root) {
                 </div>
             </div>
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
@@ -286,7 +286,7 @@ window.render = function (data, root) {
                 </div>
             </div>
             <div style="margin: 28px; width: 924px;">
-                <div style="width: 100%; height: 793px; background-color: #523b26a1; border-radius: 36px;">
+                <div style="width: 100%; height: 793px; background-color: #523b26; border-radius: 36px;">
                     <div style="margin-left: 35px; display: flex;">
                         <div style="width: 50%;">
                             <div style="width: 116px; height: 116px; margin-top: 33px;">
