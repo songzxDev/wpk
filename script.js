@@ -25,7 +25,7 @@ window.render = function (data, root) {
         "https://img.alicdn.com/imgextra/i3/3954877919/O1CN01V0UUen28Mwy1c9xR1_!!0-item_pic.jpg_430x430q90.jpg",
         "https://img.alicdn.com/imgextra/i4/2274338009/O1CN01vC8AkK292AdnMTgq5_!!2274338009.jpg_430x430q90.jpg"
     ];
-    let c = <div>
+    let c = /*<div>
         <div style="height: 279px; background-color: #9e48ff;">
             <div style="display: flex; align-items: center; height: 100%;">
                 <div style="width: 33.33%;">
@@ -37,7 +37,7 @@ window.render = function (data, root) {
                 </div>
                 <div style="width: 33.33%;"></div>
             </div>
-        </div>
+        </div>*/
         <TabView style="width:100%;height:100%;">
             <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
                         style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#f8f8f9;white-space:normal;font-size:50px">
@@ -123,7 +123,7 @@ window.render = function (data, root) {
                 <ListView data={cardView3}></ListView>
             </ScrollView>
         </TabView>
-    </div>;
+    // </div>;
 
     // let c = tree;
     // c = <div>
