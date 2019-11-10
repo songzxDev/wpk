@@ -119,7 +119,7 @@ window.render = function (data, root) {
                 <ListView data={data}></ListView>
             </ScrollView>
             <ScrollView tab-title="品牌新店" placeHolderText="load more" on-scrolltobottom={loadMore}
-                        style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#FFFFFF;white-space:normal;">
+                        style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#FFFFFF;">
                 <ListView data={cardView3}></ListView>
             </ScrollView>
         </TabView>
