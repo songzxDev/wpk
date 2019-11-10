@@ -25,6 +25,7 @@ export default class ScrollView {
         this.root = document.createElement("div");
         this.placeHolder = document.createElement('div');
         this.placeHolder.style.backgroundColor = '#adadad';
+        this.placeHolder.style.fontSize = '50px';
         this.root.appendChild(this.placeHolder);
         let triggered = false;
         this.root.addEventListener('scroll', (event) => {
