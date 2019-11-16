@@ -26,6 +26,8 @@ export default class ScrollView {
         this.placeHolder = document.createElement('div');
         this.placeHolder.style.backgroundColor = '#adadad';
         this.placeHolder.style.fontSize = '50px';
+        this.placeHolder.style.textAlign = 'center';
+        this.placeHolder.style.lineHeight = '52px';
         this.root.appendChild(this.placeHolder);
         let triggered = false;
         this.root.addEventListener('scroll', (event) => {
@@ -34,7 +36,7 @@ export default class ScrollView {
             let placeHolderRect = this.placeHolder.getBoundingClientRect();
             if (cliRect.bottom < placeHolderRect.top) {
                 if (!triggered) {
-                    console.log('begin', Date.now())
+                    console.log('begin', Date.now());
                     this.triggerEvent('scrolltobottom');
                     triggered = true;
                 }

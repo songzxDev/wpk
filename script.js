@@ -9,11 +9,11 @@ import Carousel from './carouselview.js';
 * 禁用系统的scroll
 * */
 function loadMore() {
+    this.setAttribute('placeHolderText', '加载中......');
     setTimeout(() => {
-
-        this.setAttribute('placeHolderText', 'No more');
+        this.setAttribute('placeHolderText', '没有更多了');
         console.log('end', Date.now())
-    }, 5000);
+    }, 2500);
 }
 
 window.render = function (data, root) {
@@ -39,7 +39,7 @@ window.render = function (data, root) {
             </div>
         </div>*/
         <TabView style="width:100%;height:100%;">
-            <ScrollView tab-title="推荐" placeHolderText="load more" on-scrolltobottom={loadMore}
+            <ScrollView tab-title="推荐" placeHolderText="加载更多" on-scrolltobottom={loadMore}
                         style="-webkit-overflow-scrolling:touch;overflow:scroll;background-color:#f8f8f9;white-space:normal;font-size:50px">
                 <Carousel
                     style="margin: 28px; height: 492px; width: 924px;; overflow: hidden; white-space: nowrap;"
